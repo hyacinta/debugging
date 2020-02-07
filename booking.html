@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>대한항공</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="./css/booking.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700&amp;subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic" media="all">
+    </head>
+<body>
+<div class="container">
+<!-- header -->
+    <header class="header">
+        <h1>
+            <a href="#" title="대한항공 홈페이지 이동" class="header__korean-air">KOREAN AIR</a>
+            <a href="#" title="스카이팀 홈페이지 이동" class="header__sky-team">SKY TEAM</a>
+        </h1>
+        <div class="util clearfix">
+            <div class="langs-country float--left">
+                <button type="button" class="langs-country__btn-open" title="설정 열기">지역/언어</button>
+                <div class="langs-country__select-box">
+                    <form action="https://formspree.io/mjvyzlyp">
+                        <fieldset class="langs-country__country-select">
+                            <label for="countrySelectBox">국가/지역선택</label>
+                            <select name="country" id="countrySelectBox">
+                                <option value="대한민국">대한민국</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="langs-country__langs-select">
+                            <label for="langsSelectBox">언어 선택</label>
+                            <select name="langs" id="langsSelectBox">
+                                <option value="Korean">한국어</option>
+                                <option value="English">English</option>
+                            </select>
+                        </fieldset>
+                        <button type="button" class="btn btn__select">선택</button>
+                    </form>
+                    <button type="button" class="btn--closed" title="닫기"></button>
+                </div>
+                <ul class="langs-country__current-view clearfix">
+                    <li class="langs-country__current-country" title="현재 선택된 지역">대한민국</li>
+                    <li class="langs-country__current-langs" title="현재 선택된 언어">한국어</li>
+                    <li><a href="#" title="영문 홈페이지로 이동하기">English</a></li>
+                </ul>
+            </div>
+            <div class="float--right">
+                <ul class="member clearfix">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">나의예약</a></li>
+                    <li><a href="#">위시리스트</a></li>
+                </ul>
+                <div class="search">
+                    <input type="search" class="input" placeholder="검색">
+                    <button type="submit" class="search__btn" title="검색하기"></button>
+                </div>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul class="nav__depth1 clearfix">
+                <li class="nav__depth1-menu1">
+                    <h2 class="a11y-hidden">항공권 예매</h2>
+                    <button type="button" class="nav__btn" title="서브 메뉴 열기">항공권 예매</button>
+                    <div class="nav__sub-menu-box">
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">항공권 예매</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">일반 예매</a></li>
+                                <li><a href="#">조회/변경/환불</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">보너스 항공권 예매</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">보너스 예매</a></li>
+                                <li><a href="#">조회/변경/환불</a></li>
+                                <li><a href="#">보너스 좌석 상황 보기</a></li>
+                                <li><a href="#">보너스 알리미</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">항공권 선물하기</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">국내선 선물하기</a></li>
+                                <li><a href="#">국제선 선물하기</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">항공편 조회</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">출도착 조회</a></li>
+                                <li><a href="#">스케줄 조회</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__depth2 routemap">
+                            <a href="#" class="depth2__title">운항 노선도</a>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">이용 안내</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">항공권 변경 및 환불 안내</a></li>
+                                <li><a href="#">국내선 운임 안내</a></li>
+                                <li><a href="#">환승전용내항기 예매</a></li>
+                                <li><a href="#">스카이팀 세계일주 운임</a></li>
+                                <li><a href="#">공동운항 항공사</a></li>
+                                <li><a href="#">구매 가이드</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn--closed" title="항공권 예매 서브메뉴 닫기"></button>
+                    </div>
+                </li>
+                <li class="nav__depth1-menu2">
+                    <h2 class="a11y-hidden">스카이패스</h2>
+                    <button type="button" class="nav__btn" title="서브메뉴 열기">스카이패스</button>
+                    <div class="nav__sub-menu-box">
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">회원 혜택</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">스카이패스 회원 혜택</a></li>
+                                <li><a href="#">스카이팀 공동 혜택</a></li>
+                                <li><a href="#">가족 마일리지 제도</a></li>
+                                <li><a href="#">제휴사 할인 혜택</a></li>
+                                <li><a href="#">상용기업우대제도</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">마일리지 적립</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">대한항공</a></li>
+                                <li><a href="#">신용카드</a></li>
+                                <li><a href="#">제휴 항공사</a></li>
+                                <li><a href="#">호텔</a></li>
+                                <li><a href="#">렌터카</a></li>
+                                <li><a href="#">기타 제휴사</a></li>
+                                <li><a href="#">마일리지 사후 적립 신청</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">항공 보너스 사용</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">보너스 항공권</a></li>
+                                <li><a href="#">좌석승급 보너스</a></li>
+                                <li><a href="#">세계일주 보너스</a></li>
+                                <li><a href="#">KAL 라운지 보너스</a></li>
+                                <li><a href="#">초과 수화물 보너스</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">비항공 보너스 사용</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">로고 상품</a></li>
+                                <li><a href="#">코트룸 보너스</a></li>
+                                <li><a href="#">마일로 호텔로</a></li>
+                                <li><a href="#">마일로 렌터카</a></li>
+                                <li><a href="#">마일로 리무진</a></li>
+                                <li><a href="#">마일로 투어</a></li>
+                                <li><a href="#">문화 체험 상품</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn--closed" title="스카이패스 서브메뉴 닫기"></button>
+                    </div>
+                </li>
+                <li class="nav__depth1-menu3">
+                    <h2 class="a11y-hidden">서비스 안내</h2>
+                    <button type="button" class="nav__btn" title="서브메뉴 열기">서비스 안내</button>
+                    <div class="nav__sub-menu-box">
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">탑승수속</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">탑승수속</a></li>
+                                <li><a href="#">연결 탑승수속</a></li>
+                                <li><a href="#">사전 좌석배정</a></li>
+                                <li><a href="#">키오스크</a></li>
+                                <li><a href="#">모바일/웹 체크인</a></li>
+                                <li><a href="#">출입국 규정 조회</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__depth2 aircraft-info">
+                            <a href="#" class="depth2__title">항공기 안내</a>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">수하물</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">운송 가능 수화물</a></li>
+                                <li><a href="#">운송 제한 품목</a></li>
+                                <li><a href="#">수하물 연결 수속</a></li>
+                                <li><a href="#">분실/지연/파손</a></li>
+                                <li><a href="#">기내 유실물 찾기</a></li>
+                                <li><a href="#">수하물 준비방법</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__depth2 in-flight-shopping">
+                            <a href="#" class="depth2__title">기내면세품</a>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">도움이 필요한 고객</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">한가족 서비스</a></li>
+                                <li><a href="#">비동반 소아 서비스</a></li>
+                                <li><a href="#">몸이 불편하신 고객</a></li>
+                                <li><a href="#">임신부 고객</a></li>
+                                <li><a href="#">유아동반 고객</a></li>
+                                <li><a href="#">반려동물과 여행하기</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__depth2 coatroom">
+                            <a href="#" class="depth2__title">코트룸 서비스</a>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">공항 및 환승 정보</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">인천공항</a></li>
+                                <li><a href="#">도심공항</a></li>
+                                <li><a href="#">취항지 공항정보</a></li>
+                                <li><a href="#">KAL 라운지</a></li>
+                                <li><a href="#">KAL 리무진</a></li>
+                                <li><a href="#">Rail & Fly</a></li>
+                                <li><a href="#">SkyPriority</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">기내 및 클래스별 서비스</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">일등석</a></li>
+                                <li><a href="#">프레스티지석</a></li>
+                                <li><a href="#">일반석</a></li>
+                                <li><a href="#">기내 서비스 순서</a></li>
+                                <li><a href="#">기내 오락</a></li>
+                                <li><a href="#">기내식 및 특별기내식</a></li>
+                                <li><a href="#">기내 여행 가이드</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn--closed" title="서비스 안내 서브메뉴 닫기"></button>
+                    </div>
+                </li>
+                <li class="nav__depth1-menu4">
+                    <h2 class="a11y-hidden">프로모션/여행상품</h2>
+                    <button type="button" class="nav__btn" title="서브메뉴 열기">프로모션/여행상품</button>
+                    <div class="nav__sub-menu-box">
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">이벤트</a>
+                        </div>
+                        <div class="nav__depth2 dc-ticket">
+                            <a href="#" class="depth2__title">특가 항공권</a>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">엑설런트 보딩패스</a>
+                        </div>
+                        <div class="nav__depth2 transit-program">
+                            <a href="#" class="depth2__title">엑설런트 트랜짓 프로그램</a>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">전용기 서비스</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">서비스 개요</a></li>
+                                <li><a href="#">상품 안내</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__depth2">
+                            <a href="#" class="depth2__title">여행 상품</a>
+                            <ul class="nav__depth3">
+                                <li><a href="#">해외여행상품</a></li>
+                                <li><a href="#">호텔</a></li>
+                                <li><a href="#">렌터카</a></li>
+                                <li><a href="#">해외여행자 보험</a></li>
+                                <li><a href="#">플라이트 아카데미</a></li>
+                                <li><a href="#">여행정보사이트</a></li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn--closed" title="프로모션/여행상품 서브메뉴 닫기"></button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- main contents -->
+    <main class="main">
+        <div class="inner">
+            <h2 class="main__title">항공권 예매</h2>
+            <form action="https://formspree.io/mjvyzlyp">
+                
+                <div class="main__tab-btn">
+                    <button class="main__booking-select active">일반 예매</button>
+                    <button class="main__booking-select">보너스 예매</button>
+                </div>
+
+                <!-- 보너스 예매 -->
+                <fieldset class="bonus">
+                    <legend>보너스 선택</legend>
+                    <ul class="input--radio">
+                        <li>
+                            <input type="radio" name="select-bonus" id="koreanair-bonus" checked>
+                            <label for="koreanair-bonus"><span class="icon--radio"></span>대한항공 보너스</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="select-bonus" id="skyteam-bonus">
+                            <label for="skyteam-bonus"><span class="icon--radio"></span>스카이팀 보너스</label>
+
+                            <!-- 스카이팀 보너스 상세안내 dimmed-->
+                            <button type="button" title="스카이팀 보너스 상세 안내" class="btn--question"></button>
+                            <div class="dimmed dimmed__outbox" role="dialog">
+                                <div class="dimmed__inbox dimmed__bonus">
+                                    <h3>스카이팀 보너스 안내</h3>
+                                    <p>
+                                        스카이팀 보너스는 대한항공 운항 구간을 포함하여 스카이팀 제휴항공사가 운항하는 모든 보너스 항공권 여정에서 이용할 수 있습니다.<br>
+                                        단, 공동운항편의 경우에는 보너스 항공권을 사용할 수 없습니다.
+                                    </p>
+                                    <p>
+                                        실제 스카이팀 보너스 좌석 현황이 반영되지 않는 경우가 있습니다.<br>
+                                        좌석이 조회되지 않는 경우 서비스센터로 문의하시기 바랍니다.
+                                    </p>
+                                    <p>
+                                        ※ 태평양과 대서양을 모두 횡단하는 세계 일주 여정인 경우 홈페이지를 통한 예매가 불가하오니 서비스센터를 통해 세계 일주 보너스 항공권을 예매하시기 바랍니다.
+                                    </p>
+                                    <button type="button" class="btn--closed" title="닫기"></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <!-- 여정 선택 -->
+                <fieldset class="journey">
+                    <legend class="a11y-hidden">여정 선택</legend>
+                    <ul class="input--radio">
+                        <li>
+                            <input type="radio" name="select-journey" id="one-way">
+                            <label for="one-way"><span class="icon--radio"></span>편도</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="select-journey" id="round-trip" checked>
+                            <label for="round-trip"><span class="icon--radio"></span>왕복</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="select-journey" id="multi-city">
+                            <label for="multi-city"><span class="icon--radio"></span>다구간</label>
+                            
+                            <!-- 다구간 여정 상세안내 dimmed -->
+                            <button type="button" title="다구간 여정 상세안내" class="btn--question"></button>
+                            <div class="dimmed dimmed__outbox" role="dialog">
+                                <div class="dimmed__inbox dimmed__multi-city">
+                                    <h3>다구간 여정 안내</h3>
+                                    <p class="font-size--large">
+                                        다구간 여정에서는 계획된 일정에 따라 2구간에서 최대 6개 구간까지 예약하실 수 있으며, 국내 및 해외 공항에서 경유 또는 스톱오버 하실 수 있습니다.
+                                    </p>
+                                    <ol>
+                                        <li>
+                                            <h4>첫번째 여정의 도착지와 두번째 여정의 출발지가 다른 경우</h4>
+                                            <p>
+                                                예시 <span class="no-read" aria-hidden="true">)</span> 인천 <span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span> 도쿄 <span class="no-read" aria-hidden="true">/</span><span class="a11y-hidden">항공편이 아닌 다른 교통수단으로 이동</span> 오사카<span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span> 인천 또는 부산 <span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span> 런던 <span class="no-read" aria-hidden="true">/</span><span class="a11y-hidden">항공편이 아닌 다른 교통수단으로 이동</span> 파리<span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span> 인천
+                                            </p>
+                                            <p class="font-size--small">
+                                                <span class="no-read" aria-hidden="true">※</span><em class="a11y-hidden">주의!</em>
+                                                도쿄<span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span>오사카, 런던<span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span>파리는 항공편을 이용하지 않고 기타 교통편을 이용하는 경우입니다.
+                                            </p>
+                                            <div class="explain">
+                                                <div class="plan">
+                                                    <span class="city">
+                                                        인천<br>
+                                                        <span class="font-size--small">(1월 1일)</span>
+                                                    </span>
+                                                    <span class="a11y-hidden">에서</span>
+                                                    <span class="city">도쿄</span>
+                                                </div>
+                                                <div class="to">
+                                                    <span class="a11y-hidden">항공편이 아닌 다른 교통수단으로 이동</span>
+                                                </div>
+                                                <div class="plan">
+                                                    <span class="city">
+                                                        오사카<br>
+                                                        <span class="font-size--small">(1월 5일)</span>
+                                                    </span>
+                                                    <span class="a11y-hidden">에서</span>
+                                                    <span class="city">인천</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h4>여정 중간에서 스톱오버 후 다음 여정을 시작하는 경우</h4>
+                                            <p>
+                                                예시 <span class="no-read" aria-hidden="true">)</span> 인천<span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span> 뉴욕 (대한항공), 뉴욕<span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span> 로스앤젤레스 (미국 국내선), 로스앤젤레스 <span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span> 인천 (대한항공)
+                                            </p>
+                                            <div class="explain">
+                                                <div class="plan">
+                                                    <span class="city">
+                                                        인천<br>
+                                                        <span class="font-size--small">(1월 1일)</span>
+                                                    </span>
+                                                    <span class="a11y-hidden">에서</span>
+                                                    <span class="city">
+                                                        뉴욕<br>
+                                                        <span class="font-size--small">(1월 5일)</span>
+                                                    </span>
+                                                    <span class="a11y-hidden">에서</span>
+                                                    <span class="city">
+                                                        로스앤젤레스<br>
+                                                        <span class="font-size--small">(1월 10일)</span>
+                                                    </span>
+                                                    <span class="a11y-hidden">에서</span>
+                                                    <span class="city">인천</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h4>안내 1, 2의 여정 형태가 결합된 경우</h4>
+                                            <p>
+                                                예시 <span class="no-read" aria-hidden="true">)</span> 인천<span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span> 런던 (대한민국), 파리 <span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span> 비엔나 (유럽 항공사), 비엔나 <span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span> 로마 (유럽 항공사), 로마 <span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span> 인천 (대한항공)
+                                            </p>
+                                            <p class="font-size--small">
+                                                <span class="no-read" aria-hidden="true">※</span><em class="a11y-hidden">주의!</em>
+                                                런던<span class="no-read" aria-hidden="true">-</span><span class="a11y-hidden">에서</span> 파리는 항공편을 이용하지 않고 기타 교통편을 이용하는 경우입니다.
+                                            </p>
+                                            <div class="explain">
+                                                <div class="plan">
+                                                    <span class="city">
+                                                        인천<br>
+                                                        <span class="font-size--small">(1월 1일)</span>
+                                                    </span>
+                                                    <span class="a11y-hidden">에서</span>
+                                                    <span class="city">런던</span>
+                                                </div>
+                                                <div class="to">
+                                                    <span class="a11y-hidden">항공편이 아닌 다른 교통수단으로 이동</span>
+                                                </div>
+                                                <div class="plan">
+                                                    <span class="city">
+                                                        파리<br>
+                                                        <span class="font-size--small">(1월 5일)</span>
+                                                    </span>
+                                                    <span class="a11y-hidden">에서</span>
+                                                    <span class="city">
+                                                        비엔나<br>
+                                                        <span class="font-size--small">(1월 10일)</span>
+                                                    </span>
+                                                    <span class="a11y-hidden">에서</span>
+                                                    <span class="city">
+                                                        로마<br>
+                                                        <span class="font-size--small">(1월 15일)</span>
+                                                    </span>
+                                                    <span class="a11y-hidden">에서</span>
+                                                    <span class="city">인천</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <div class="caution">
+                                        <h4 class="font-size--regular">유의사항</h4>
+                                        <ul class="font-size--small list-style-point">
+                                            <li>한국 지역 포함 최대 3개 지역, 12개 항공편으로 구성된 여정까지 예약 가능합니다.</li>
+                                            <li>도착 지역이 첫 출발 지역과 동일해 지는 경우, 이후 추가 여정은 동일 지역 내에서 최대 한번까지 가능합니다. (단, 한국, 미주, 유럽, 대양주 지역에 한함)</li>
+                                            <li>한 여정의 도착지와 다음 여정의 출발지는 동일 지역 내에서만 선택하실 수 있습니다. (예시. 인천-뉴욕/오사카-인천은 홈페이지를 통해 예매하실 수 없습니다.)</li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn--closed" title="닫기"></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 주변일자 조회 설명 -->
+                    <div class="peripheral-date">
+                        <div class="peripheral-date__check input--checkbox">
+                            <input type="checkbox" id="peripheral">
+                            <label for="peripheral"><span class="icon--checkbox"></span>주변일자 조회</label>
+                        </div>
+                        <p class="description__box">
+                            선택하신 날짜 기준 앞/뒤 여정으로 가장 최근 판매된 성인 1인 기준 최저 운임을 확인하실 수 있습니다. <br>
+                            항공사 부과 금액과 세금을 포함한 1인 기준 예상 최저 운임이며, 구매 시점과 환율에 따라 변동될 수 있습니다.
+                        </p>
+                    </div>
+                    <ul class="journey__area-date">
+                        <li>
+                            <label for="journeyStart" class="a11y-hidden">출발지</label>
+                            <div class="input--text-outbox">
+                                <input type="text" placeholder="출발지" id="journeyStart">
+                                <button type="button" class="btn--target" title="출발지 선택하기"></button>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="journeyEnd" class="a11y-hidden">목적지</label>
+                            <div class="input--text-outbox">
+                                <input type="text" placeholder="목적지" id="journeyEnd">
+                                <button type="button" class="btn--target" title="목적지 선택하기"></button>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="journeySchedule" class="a11y-hidden">가는 날, 오는 날</label>
+                            <div class="input--text-outbox">
+                                <input type="text" placeholder="가는날/오는 날(YYYY-MM-DD)" id="journeySchedule">
+                                <button type="button" class="btn--date" title="일자 선택하기"></button>
+                            </div>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <!-- 좌석 선택 -->
+                <fieldset class="seat">
+                    <legend>좌석 등급</legend>
+                    <ul class="input--radio">
+                        <li>
+                            <input type="radio" name="select-seat" id="economy-class" checked>
+                            <label for="economy-class"><span class="icon--radio"></span>일반석</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="select-seat" id="prestige-class">
+                            <label for="prestige-class"><span class="icon--radio"></span>프레스티지석</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="select-seat" id="first-class">
+                            <label for="first-class"><span class="icon--radio"></span>일등석</label>
+                        </li>
+                    </ul>
+
+                    <!-- 마일리지 좌석 승급 설명 -->
+                    <div class="mileage-upgrade">
+                        <div class="mileage-upgrade__check input--checkbox">
+                            <input type="checkbox" name="mileage-upgrade__search" id="mileage-upgrade__search">
+                            <label for="mileage-upgrade__search"><span class="icon--checkbox"></span>마일리지 좌석승급 가능한 운임만 조회</label>
+                        </div>
+                        <p class="description__box">
+                            <span class="color-point--main"> 홈페이지에서 마일리지 사용 좌성승급은 유상 항공권 예약/구매를 완료한 후, 좌석승급 메뉴에서 <strong>별도로</strong> 진행하셔야 합니다.</span> (나의 예약&gt;예약상세조회&gt;좌석승급 버튼)<br>
+                            타항공사가 운항하는 공동운항편은 보너스 업그레이드가 불가할 수 있으니 서비스센터로 확인하시기 바랍니다. <br>
+                            마일리지로 좌석 승급할 프레스티지 클래스 잔여 좌석은 별도로 확인이 필요합니다.<br>
+                            <a href="#" title="보너스 좌석 상황보기(새창)" class="color-point--main text-link--line">보너스 좌석 상황보기</a>
+                        </p>
+                    </div>
+                </fieldset>
+
+                <!-- 탑승자 선택 -->
+                <fieldset class="occupant">
+                    <legend class="a11y-hidden">탑승자 선택</legend>
+                    <p class="occupant__title">
+                        본인 및 스카이패스 등록 가족 중에서 탑승자를 선택하실 수 있습니다.
+                        <button type="button" title="탑승자 상세안내" class="btn--question"></button>
+                    </p>
+                    <!-- 탑승자 선택 설명 -->
+                    <ul class="description__box occupant__caution">
+                        <li>
+                            예약 후 성명 변경은 <em class="color-point--red">불가</em>하오니 실제 탑승하실 분의 성명을 정확하게 확인하시기 바랍니다.
+                        </li>
+                        <li>
+                            출도착 공항 및 여행 일자를 먼저 선택해 주세요.
+                        </li>
+                        <li>
+                            로그인 회원 1인의 항공권 구매 시에는 회원 본인 및 사전에 동의를 받은 가족의 마일리지를 합산하여 사용이 가능합니다.
+                        </li>
+                        <li>
+                            로그인 회원 본인 포함 2인 이상 또는 본인 제외 가족의 항공권 구매시에는 가족 합산이 불가하며 로그인 회원의 마일리지만 사용 가능합니다.
+                            <a href="#" class="color-point--main text-link--line">자세히보기</a>
+                        </li>
+                    </ul>
+                    <ul class="occupant__select input--checkbox disabled">
+                        <li>
+                            <input type="checkbox" name="occupant_list" id="occupant" checked>
+                            <label for="occupant"><span class="icon--checkbox"></span>KIM KYUREE</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <!-- 인원 선택 -->
+                <fieldset class="passenger">
+                    <legend class="a11y-hidden">인원 선택</legend>
+                    <ul class="passenger__count">
+                        <li>
+                            <label for="adult">성인</label>
+                            <div class="input--counter">
+                                <input type="text" name="adult" id="adult" value="1">
+                                <button type="button" title="탑승자 한명 줄이기" class="decrease"></button>
+                                <button type="button" title="탑승자 한명 늘리기" class="increase"></button>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="child">소아(만2-11세)</label>
+                            <div class="input--counter">
+                                <input type="text" name="child" id="child" value="0">
+                                <button type="button" title="탑승자 한명 줄이기" class="decrease"></button>
+                                <button type="button" title="탑승자 한명 늘리기" class="increase"></button>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="baby">유아(만2세 미만)</label>
+                            <div class="input--counter">
+                                <input type="text" name="baby" id="baby" value="0">
+                                <button type="button" title="탑승자 한명 줄이기" class="decrease"></button>
+                                <button type="button" title="탑승자 한명 늘리기" class="increase"></button>
+                            </div>
+                        </li>
+                        <li>
+                            <!-- 승객 연령 기준 상세안내 dimmed -->
+                            <button type="button" class="btn--question" title="승객연령기준 상세안내">승객 연령 기준</button>
+                            <div class="dimmed dimmed__outbox" role="dialog">
+                                <div class="dimmed__inbox dimmed__child--guide">
+                                    <h3>소아/유아 안내</h3>
+                                    <table>
+                                        <caption class="a11y-hidden">
+                                            승객 연령 상세 안내 : 유아, 소아
+                                        </caption>
+                                        <colgroup>
+                                            <col style="width:20%;">
+                                            <col style="width:40%;">
+                                            <col style="width:40%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>소아</th>
+                                                <th>유아</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>적용 대상</th>
+                                                <td>
+                                                    <ul>
+                                                        <li>국제선 : 만 2세 이상 12세 미만</li>
+                                                        <li>국내선 : 만 2세 이상 13세 미만</li>
+                                                    </ul>
+                                                </td>
+                                                <td>만 2세 (24개월) 미만</td>
+                                            </tr>
+                                            <tr>
+                                                <th>기준</th>
+                                                <td>첫번째 항공편 출발일 기준</td>
+                                                <td>각 항공편 탑승일 기준</td>
+                                            </tr>
+                                            <tr>
+                                                <th>유의사항</th>
+                                                <td>만 18세 이상 (국내선은 13세)의 보호자와 동일 클래스 동반 탑승 필요<br>(불가 시, 비동반 소아 서비스 신청 필수)</td>
+                                                <td>
+                                                    <ul>
+                                                        <li>반드시 성인과 함께 예약 필요</li>
+                                                        <li>별도 좌석 미제공</li>
+                                                        <li>별도 좌석 원하시는 경우 "소아" 선택하여 소아운임으로 예매하여 주시기 바랍니다.</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="font-size--small">* 자세한 내용은 FAQ 또는 서비스센터로 문의하여 주시기 바랍니다.</p>
+                                    <button type="button" class="btn--closed" title="닫기"></button>
+                                </div>
+                            </div>
+
+                            <!-- 나이계산기 dimmed -->
+                            <button type="button" class="btn btn--outline btn__calculator">나이 계산기</button>
+                            <div class="dimmed dimmed__outbox" role="dialog">
+                                <div class="dimmed__inbox dimmed__child--caution">
+                                    <p class="font-size--large">탑승일을 먼저 선택하여 주십시오.</p>
+                                    <button type="button" class="btn dimmed__btn">확인</button>
+                                    <button type="button" class="btn--closed" title="닫기"></button>
+                                </div>
+                            </div>
+
+
+                            <div class="dimmed dimmed__outbox" role="dialog">
+                                <div class="dimmed__inbox dimmed__child--calculator">
+                                    <h3>소아/유아 나이 계산기</h3>
+                                    <div>
+                                        <p class="font-size--large command">생년월일을 선택하세요</p>
+                                        <ul class="dimmed__year-calculator">
+                                            <li>
+                                                <label for="birthYear" class="a11y-hidden"></label>
+                                                <select name="birthYear" id="birthYear">
+                                                    <option value="year">년</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <label for="birthMonth" class="a11y-hidden"></label>
+                                                <select name="birthMonth" id="birthMonth">
+                                                    <option value="month">월</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <label for="birthDay" class="a11y-hidden"></label>
+                                                <select name="birthDay" id="birthDay">
+                                                    <option value="day">일</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                        <button type="button" class="btn calculator__btn">계산하기</button>
+                                    </div>
+                                    <h4>유의사항</h4>
+                                    <p class="font-size--small">
+                                        소아는 첫번째 항공편 출발일 기준으로 만 2세 이상 ~ 만 13세 미만 (국제선은 만 12세 미만)이며 유아는 각 항공편의 탑승일 기준으로 만 2세 미만입니다.
+                                    </p>
+                                    <button type="button" class="btn--closed" title="나이 계산기 닫기"></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- 인원 선택 설명 -->
+                    <div class="description__box passenger__precaution">
+                        <ul>
+                            <li>
+                                소아는 첫번째 국제선 항공편 출발일 기준으로 만 2세-만 11세까지이며, 유아는 각 항공편의 탑승일 기준으로 만 2세(24개월) 미만입니다.<br>
+                                유소아를 동반하는 보호자는 <em>부모 또는 만 18세 이상이어야 하며, 반드시 유소아와 동일 좌석 등급</em>에 탑승해야 합니다.<br>
+                                소아 승객이 만 18세 미만의 성인 승객과 동반하여 탑승할 경우, <em>비동반 소아 서비스</em> 신청이 필요하며 대한항공 서비스 센터에서 자세한 안내를 받으실 수 있습니다.<br>
+                                <a href="#" class="color-point--main text-link--line" title="비동반 소아 서비스 자세히 보기(새창)">비동반 소아 서비스 자세히 보기</a><br>
+                                유/소아와 동반 예약 시, 신분 할인은 서비스 센터로 문의하여 주시기 바랍니다.
+                            </li>
+                            <li>
+                                <a href="#" class="color-point--main text-link--line" title="유/ 소아 동반 고객을 위한 서비스 및 편의 시설 자세히 보기(새창)" >유/ 소아 동반 고객을 위한 서비스 및 편의 시설 자세히 보기</a>
+                            </li>
+                            <li>
+                                개인할인은 일반석 정상운임에만 적용되며, 일반석 특별운임 및 프레스티지석에는 적용되지 않습니다. <br>
+                                (예 : 제주도민, 경로우대, 장애인 등)
+                                <a href="#" class="color-point--main text-link--line">국내선 운임안내</a>
+                            </li>
+                        </ul>
+                        <div class="input--checkbox">
+                            <input type="checkbox" id="peripheralAgree">
+                            <label for="peripheralAgree"><span class="icon--checkbox"></span><em>유소아 동반 보호자 나이 및 유의사항에 동의합니다.</em></label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <!-- 결제 통화 선택 -->
+                <fieldset class="payment">
+                    <legend>결제 통화</legend>
+                    <ul class="input--radio">
+                        <li>
+                            <input type="radio" name="select-payment" id="KRW">
+                            <label for="KRW"><span class="icon--radio"></span>KRW</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="select-payment" id="USD">
+                            <label for="USD"><span class="icon--radio"></span>USD</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <button type="submit" class="btn btn__next-step">항공편 조회</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="inner">
+            <ul class="footer__sitemap clearfix">
+                <li>
+                    <h2>회사소개</h2>
+                    <ul class="sitemap__sub-menu">
+                        <li><a href="#">대한항공에 대하여</a></li>
+                        <li><a href="#">기업지배구조</a></li>
+                        <li><a href="#">투자정보</a></li>
+                        <li><a href="#">지속가능경영</a></li>
+                        <li><a href="#">뉴스룸</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>약관 및 규정</h2>
+                    <ul class="sitemap__sub-menu">
+                        <li class="sitemap__privacy-police">
+                            <a href="#">개인정보 처리방침</a><a href="#" class="sitemap__certification-view" title="정보 보호관리체계 인증서 보기"><img src="https://www.koreanair.com/content/dam/koreanair/Global/icons/00_MenuIcons/footer_kisa.png" alt="정보 보호관리체계 인증마크"></a>
+                        </li>
+                        <li><a href="#">회원약관</a></li>
+                        <li><a href="#">운송약관</a></li>
+                        <li><a href="#">소비자 안전 관련 정보 공개</a></li>
+                        <li><a href="#">운임 및 서비스 요금표</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>기타 안내</h2>
+                    <ul class="sitemap__sub-menu">
+                        <li><a href="#">고객 안내 서비스</a></li>
+                        <li><a href="#">항공교통이용자 서비스 계획</a></li>
+                        <li><a href="#">항공교통이용자 피해구제</a></li>
+                        <li><a href="#">관련 사이트</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>고객지원</h2>
+                    <ul class="sitemap__sub-menu">
+                        <li><a href="#">지점 연락처</a></li>
+                        <li><a href="#">고객의 말씀</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">e 서식함</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="footer__bottom clearfix">
+                <div class="float--left">
+                    <ul class="address">
+                        <li>㈜대한항공</li>
+                        <li>대표이사 : 우기홍 외 1명</li>
+                        <li>주소 : 서울특별시 강서구 하늘길 260</li>
+                        <li>대표전화 : 1588-2001 / 02-2656-2001</li>
+                        <li>사업자 등록번호 : 110-81-14794</li>
+                        <li>통신판매업신고 : 강서 제 16-3010</li>
+                        <li>개인정보보호책임자 : 여객사업본부장 이진호 전무</li>
+                    </ul>
+                    <p class="copyright">&copy;1997-2020 KOREAN AIR</p>
+                </div>
+                <ul class="sns float--left">
+                    <li class="sns__facebook"><a href="#">Facebook</a></li>
+                    <li class="sns__twitter"><a href="#">Twitter</a></li>
+                    <li class="sns__instargram"><a href="#">Instagram</a></li>
+                    <li class="sns__youtube"><a href="#">Youtube</a></li>
+                    <li class="sns__naver-blog"><a href="#">Naver blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
