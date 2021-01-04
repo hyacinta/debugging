@@ -521,10 +521,12 @@ h1 .header__sky-team {
   border: none;
   padding: 7px 28px 7px 10px;
   font-size: 1.2rem;
+  transition: all 200ms ease;
 }
 .search input[type='search']:focus {
   width: 240px;
   background-color: #fff;
+  transition: all 200ms ease;
 }
 .search__btn {
   width: 20px;
@@ -824,7 +826,8 @@ h1 .header__sky-team {
   height: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
   z-index: 100;
 }
 .dimmed__inbox {
@@ -1205,4 +1208,9 @@ li.sns__twitter {
 /* 모달 팝업 */
 .dimmed {
   display: none;
+}
+.dimmed.active,
+.peripheral-date .description__box.active,
+.mileage-upgrade .description__box.active {
+  display: block;
 }
