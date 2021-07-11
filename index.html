@@ -564,7 +564,7 @@
                         <li class="passenger__adult">
                             <label for="adult">성인</label>
                             <div class="input--counter">
-                                <input type="text" name="adult" id="adult" value="1">
+                                <input type="text" name="adult" id="adult">
                                 <button type="button" title="탑승자 한명 줄이기" class="decrease"></button>
                                 <button type="button" title="탑승자 한명 늘리기" class="increase"></button>
                             </div>
@@ -572,7 +572,7 @@
                         <li class="passenger__child">
                             <label for="child">소아(만2-11세)</label>
                             <div class="input--counter">
-                                <input type="text" name="child" id="child" value="0">
+                                <input type="text" name="child" id="child">
                                 <button type="button" title="탑승자 한명 줄이기" class="decrease"></button>
                                 <button type="button" title="탑승자 한명 늘리기" class="increase"></button>
                             </div>
@@ -580,7 +580,7 @@
                         <li class="passenger__baby">
                             <label for="baby">유아(만2세 미만)</label>
                             <div class="input--counter">
-                                <input type="text" name="baby" id="baby" value="0">
+                                <input type="text" name="baby" id="baby">
                                 <button type="button" title="탑승자 한명 줄이기" class="decrease"></button>
                                 <button type="button" title="탑승자 한명 늘리기" class="increase"></button>
                             </div>
@@ -644,15 +644,6 @@
                             <!-- 나이계산기 dimmed -->
                             <button type="button" class="btn btn--outline btn__calculator">나이 계산기</button>
                             <div class="dimmed dimmed__outbox" role="dialog">
-                                <div class="dimmed__inbox dimmed__child--caution">
-                                    <p class="font-size--large">탑승일을 먼저 선택하여 주십시오.</p>
-                                    <button type="button" class="btn dimmed__btn">확인</button>
-                                    <button type="button" class="btn--closed" title="닫기"></button>
-                                </div>
-                            </div>
-
-
-                            <div class="dimmed dimmed__outbox" role="dialog">
                                 <div class="dimmed__inbox dimmed__child--calculator">
                                     <h3>소아/유아 나이 계산기</h3>
                                     <div>
@@ -686,9 +677,15 @@
                                     <button type="button" class="btn--closed" title="나이 계산기 닫기"></button>
                                 </div>
                             </div>
+                            <div class="dimmed dimmed__outbox" role="dialog">
+                                <div class="dimmed__inbox dimmed__child--caution">
+                                    <p class="font-size--large">탑승일을 먼저 선택하여 주십시오.</p>
+                                    <button type="button" class="btn dimmed__btn">확인</button>
+                                    <button type="button" class="btn--closed" title="닫기"></button>
+                                </div>
+                            </div>
                         </li>
                     </ul>
-
                     <!-- 인원 선택 설명 -->
                     <div class="description__box passenger__precaution">
                         <ul>

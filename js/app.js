@@ -1,3 +1,10 @@
+// data
+const passenger = {
+  adult: 1,
+  child: 0,
+  baby: 0
+};
+
 // DOMS
 const $langsCountry = document.querySelector('.langs-country');
 const $langsCountrySelectBox = document.querySelector(
@@ -9,22 +16,24 @@ const $bonus = document.querySelector('.bonus');
 const $occupant = document.querySelector('.occupant');
 const $journey = document.querySelector('.journey');
 const $seat = document.querySelector('.seat');
+const $passenger = document.querySelector('.passenger');
+const $passengerCount = document.querySelector('.passenger__count');
 
 // dimmed popup open/closed
-const dimmed = target => {
+const dimmed = (target, btnCategory) => {
   if (
     !(
-      target.classList.contains('btn--question') ||
+      target.classList.contains(btnCategory) ||
       target.classList.contains('btn--closed')
     )
   ) {
     return;
   }
-  const $dimmedBox = target.classList.contains('btn--question')
+  const $dimmedBox = target.classList.contains(btnCategory)
     ? target.nextElementSibling
     : target.parentElement.parentElement;
 
-  $dimmedBox.style.display = target.classList.contains('btn--question')
+  $dimmedBox.style.display = target.classList.contains(btnCategory)
     ? 'block'
     : 'none';
 };
@@ -37,6 +46,29 @@ const description = (target, zone) => {
     const $input = target.parentElement.firstElementChild;
     $desctiptionBox.style.display = $input.checked ? 'block' : 'none';
   }
+};
+
+// passenger 계산된 값 input 반영
+const passengerInput = passenger => {
+  const passengerAgeList = [
+    $passengerCount.querySelectorAll('li')[0],
+    $passengerCount.querySelectorAll('li')[1],
+    $passengerCount.querySelectorAll('li')[2]
+  ];
+
+  passengerAgeList.forEach(li => {
+    const $input = li.querySelector('input');
+    const $btnIncrease = li.querySelector('.increase');
+    const $btnDecrease = li.querySelector('.decrease');
+    const inputId = $input.id;
+    $input.value = passenger[`${inputId}`];
+    $btnIncrease.disabled = passenger[`${inputId}`] === 9 ? 'disabled' : '';
+    $btnDecrease.disabled = passenger[`${inputId}`] ? '' : 'disabled';
+  });
+};
+
+window.onload = () => {
+  passengerInput(passenger);
 };
 
 // EVENT
@@ -90,16 +122,44 @@ $bonus.onclick = ({ target }) => {
   const $input = target.parentElement.firstElementChild;
   $occupant.style.display = $input.checked ? 'block' : 'none';
 
-  dimmed(target);
+  dimmed(target, 'btn--question');
 };
 
 // 구간 선택
 $journey.onclick = ({ target }) => {
   description(target, 'peripheral-date__check');
-  dimmed(target);
+  dimmed(target, 'btn--question');
 };
 
 // 좌석 선택
 $seat.onclick = ({ target }) => {
   description(target, 'mileage-upgrade__check');
+};
+
+$passenger.onclick = ({ target }) => {
+  dimmed(target, 'btn--question');
+  dimmed(target, 'btn__calculator');
+  if (
+    !(
+      target.classList.contains('btn--question') ||
+      target.classList.contains('btn__calculator')
+    )
+  ) {
+    return;
+  }
+};
+
+const increase = number => ++number;
+const decrease = number => --number;
+
+$passengerCount.onclick = ({ target }) => {
+  const key = target.parentElement.firstElementChild.id;
+
+  const number = target.classList.contains('increase')
+    ? increase(passenger[`${key}`])
+    : decrease(passenger[`${key}`]);
+
+  passenger[`${key}`] = number;
+
+  passengerInput(passenger);
 };

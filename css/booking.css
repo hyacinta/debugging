@@ -333,9 +333,15 @@ input[type='checkbox']:checked + label .icon--checkbox {
   background-image: url('/images/icon-decrease.gif');
   order: 3;
 }
+.input--counter button.increase:disabled {
+  background-image: url('/images/icon-decrease-dis.gif');
+}
 .input--counter button.decrease {
   background-image: url('/images/icon-increase.gif');
   order: 1;
+}
+.input--counter button.decrease:disabled {
+  background-image: url('/images/icon-increase-dis.gif');
 }
 
 /* header */
@@ -789,6 +795,9 @@ h1 .header__sky-team {
 .passenger__count label {
   font-size: 1.4rem;
   font-weight: 700;
+}
+.passenger__count .input--counter {
+  margin-top: 8px;
 }
 .passenger__count button.btn--question {
   width: auto;
