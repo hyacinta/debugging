@@ -7,6 +7,8 @@ const $nav = document.querySelector('.nav__depth1');
 const $bookingSelect = document.querySelector('.main__tab-btn');
 const $bonus = document.querySelector('.bonus');
 const $occupant = document.querySelector('.occupant');
+const $journey = document.querySelector('.journey');
+const $seat = document.querySelector('.seat');
 
 // dimmed popup open/closed
 const dimmed = target => {
@@ -25,6 +27,16 @@ const dimmed = target => {
   $dimmedBox.style.display = target.classList.contains('btn--question')
     ? 'block'
     : 'none';
+};
+
+// description box open/closed
+const description = (target, zone) => {
+  if (target.classList.contains('icon--checkbox')) return;
+  if (target.parentElement.classList.contains(zone)) {
+    const $desctiptionBox = target.parentElement.nextElementSibling;
+    const $input = target.parentElement.firstElementChild;
+    $desctiptionBox.style.display = $input.checked ? 'block' : 'none';
+  }
 };
 
 // EVENT
@@ -79,4 +91,15 @@ $bonus.onclick = ({ target }) => {
   $occupant.style.display = $input.checked ? 'block' : 'none';
 
   dimmed(target);
+};
+
+// 구간 선택
+$journey.onclick = ({ target }) => {
+  description(target, 'peripheral-date__check');
+  dimmed(target);
+};
+
+// 좌석 선택
+$seat.onclick = ({ target }) => {
+  description(target, 'mileage-upgrade__check');
 };
