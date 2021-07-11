@@ -63,8 +63,8 @@ select {
   border-width: 1px 0 1px 1px;
   border-color: #919191;
   border-style: solid;
-  background: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/schedule-search/select-arrow-fallback.png')
-    no-repeat right center white;
+  background: url('/images/select-arrow-fallback.png') no-repeat right center
+    white;
 }
 select::-ms-expand {
   display: none;
@@ -148,8 +148,7 @@ em {
   width: 24px;
   height: 24px;
   padding: 5px;
-  background: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/close-button.jpg')
-    no-repeat center center;
+  background: url('/images/close-button.jpg') no-repeat center center;
 }
 .btn--question,
 .icon--question,
@@ -167,7 +166,7 @@ em {
   width: 15px;
   height: 14px;
   margin: 1px 0;
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/icon-question-mark-sm.png');
+  background-image: url('/images/icon-question-mark-sm.png');
   background-color: #fff;
 }
 .btn--question {
@@ -180,7 +179,7 @@ em {
 .icon--date {
   position: absolute;
   top: 50%;
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/icon-tripDetails.gif');
+  background-image: url('/images/icon-tripDetails.gif');
   background-color: #fff;
 }
 .btn--target,
@@ -203,7 +202,7 @@ em {
 .icon--calculator {
   width: 13px;
   height: 16px;
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/icon-age.png');
+  background-image: url('/images/icon-age.png');
   background-color: #fff;
 }
 .btn {
@@ -248,9 +247,7 @@ input[type='radio'] + label {
   width: 16px;
   height: 16px;
   margin-top: -8px;
-  background: #fff
-    url('https://www.koreanair.com/etc/clientlibs/koreanair/images/radio-all.png')
-    no-repeat 50% 0;
+  background: #fff url('/images/radio-all.png') no-repeat 50% 0;
 }
 input[type='radio']:checked + label .icon--radio {
   background-position: 50% -16px;
@@ -282,9 +279,7 @@ input[type='checkbox'] + label {
   width: 18px;
   height: 18px;
   margin-top: -9px;
-  background: #fff
-    url('https://www.koreanair.com/etc/clientlibs/koreanair/images/checkbox.png')
-    no-repeat 50% -72px;
+  background: #fff url('/images/checkbox.png') no-repeat 50% -72px;
 }
 input[type='checkbox']:checked + label .icon--checkbox {
   background-position: 50% -90px;
@@ -335,12 +330,12 @@ input[type='checkbox']:checked + label .icon--checkbox {
   background-position: center center;
 }
 .input--counter button.increase {
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/icon-increase.gif');
-  order: 1;
+  background-image: url('/images/icon-decrease.gif');
+  order: 3;
 }
 .input--counter button.decrease {
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/icon-decrease.gif');
-  order: 3;
+  background-image: url('/images/icon-increase.gif');
+  order: 1;
 }
 
 /* header */
@@ -354,8 +349,7 @@ h1 {
   width: 215px;
   height: 33px;
   font-size: 0;
-  background: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-koreanair.png')
-    no-repeat;
+  background: url('/images/top-nav-koreanair.png') no-repeat;
   z-index: 10;
 }
 h1 a {
@@ -388,8 +382,7 @@ h1 .header__sky-team {
 }
 .langs-country__btn-open {
   padding: 6px 25px 6px 10px;
-  background: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/btn-regionSelect.png')
-    no-repeat 90% center;
+  background: url('/images/btn-regionSelect.png') no-repeat 90% center;
 }
 .langs-country__btn-open:hover,
 .langs-country__btn-open:focus {
@@ -533,8 +526,7 @@ h1 .header__sky-team {
   height: 19px;
   margin-left: -25px;
   padding: 1px;
-  background: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/icon_n_search.png')
-    no-repeat center center;
+  background: url('/images/icon_n_search.png') no-repeat center center;
   outline: none;
 }
 
@@ -561,32 +553,32 @@ h1 .header__sky-team {
   background-position: 0 0;
 }
 .nav__depth1-menu1 .nav__btn {
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu1.png');
+  background-image: url('/images/top-nav-topMenu1.png');
 }
 .nav__depth1-menu1 .nav__btn:focus,
 .nav__depth1-menu1 .nav__btn:hover {
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu1-active.png');
+  background-image: url('/images/top-nav-topMenu1-active.png');
 }
 .nav__depth1-menu2 .nav__btn {
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu2.png');
+  background-image: url('/images/top-nav-topMenu2.png');
 }
 .nav__depth1-menu2 .nav__btn:focus,
 .nav__depth1-menu2 .nav__btn:hover {
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu2-active.png');
+  background-image: url('/images/top-nav-topMenu2-active.png');
 }
 .nav__depth1-menu3 .nav__btn {
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu3.png');
+  background-image: url('/images/top-nav-topMenu3.png');
 }
 .nav__depth1-menu3 .nav__btn:focus,
 .nav__depth1-menu3 .nav__btn:hover {
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu3-active.png');
+  background-image: url('/images/top-nav-topMenu3-active.png');
 }
 .nav__depth1-menu4 .nav__btn {
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu4.png');
+  background-image: url('/images/top-nav-topMenu4.png');
 }
 .nav__depth1-menu4 .nav__btn:focus,
 .nav__depth1-menu4 .nav__btn:hover {
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/top-nav-topMenu4-active.png');
+  background-image: url('/images/top-nav-topMenu4-active.png');
 }
 .nav__sub-menu-box {
   position: absolute;
@@ -668,7 +660,7 @@ h1 .header__sky-team {
   margin: 0 25px;
   border: none;
   height: 37px;
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/tab-btn-bk.gif');
+  background-image: url('/images/tab-btn-bk.gif');
   background-repeat: no-repeat;
   background-color: #fff;
   padding-left: 42px;
@@ -741,7 +733,7 @@ h1 .header__sky-team {
 .passenger__precaution li,
 .dimmed__child--calculator p,
 .list-style-point li {
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/icon-belt-bk.gif');
+  background-image: url('/images/icon-belt-bk.gif');
   background-repeat: no-repeat;
 }
 
@@ -805,9 +797,7 @@ h1 .header__sky-team {
   margin-top: 5px;
   padding: 5px 10px 4px 25px;
   font-size: 12px;
-  background: #fff
-    url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/icon-age.png')
-    no-repeat 7px center;
+  background: #fff url('/images/icon-age.png') no-repeat 7px center;
 }
 
 .btn__next-step {
@@ -857,8 +847,7 @@ h1 .header__sky-team {
   right: 20px;
   width: 30px;
   height: 30px;
-  background: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/modal/content-modal-close.png')
-    no-repeat center center;
+  background: url('/images/content-modal-close.png') no-repeat center center;
 }
 .dimmed__inbox > p {
   margin-bottom: 15px;
@@ -915,8 +904,7 @@ h1 .header__sky-team {
 }
 .dimmed__multi-city .to {
   width: 40px;
-  background: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/img-open-jaw-arrow.png')
-    no-repeat center 7px;
+  background: url('/images/img-open-jaw-arrow.png') no-repeat center 7px;
 }
 .dimmed__multi-city .city {
   position: relative;
@@ -937,9 +925,7 @@ h1 .header__sky-team {
   top: 5px;
   left: 50%;
   margin-left: -7px;
-  background: #fff
-    url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/bookingbar/img-point.png')
-    no-repeat center center;
+  background: #fff url('/images/img-point.png') no-repeat center center;
   z-index: 10;
 }
 .dimmed__multi-city .city::after {
@@ -1049,9 +1035,7 @@ h1 .header__sky-team {
 .footer {
   width: 100%;
   color: #fff;
-  background: #2e4964
-    url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/footer/foooter-bg.jpg')
-    repeat-x 0 0;
+  background: #2e4964 url('/images/foooter-bg.jpg') repeat-x 0 0;
 }
 .footer .inner {
   padding: 50px 0;
@@ -1157,7 +1141,7 @@ a.sitemap__certification-view img {
 .sns__facebook a {
   width: 26px;
   height: 28px;
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/footer/icon-fb.png');
+  background-image: url('/images/icon-fb.png');
 }
 li.sns__twitter {
   margin: 0 1px 0 5px;
@@ -1165,22 +1149,22 @@ li.sns__twitter {
 .sns__twitter a {
   width: 30px;
   height: 27px;
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/footer/icon-tw.png');
+  background-image: url('/images/icon-tw.png');
 }
 .sns__instargram a {
   width: 26px;
   height: 26px;
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/footer/icon-inst.png');
+  background-image: url('/images/icon-inst.png');
 }
 .sns__youtube a {
   width: 28px;
   height: 22px;
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/footer/icon-youtube.png');
+  background-image: url('/images/icon-youtube.png');
 }
 .sns__naver-blog a {
   width: 26px;
   height: 26px;
-  background-image: url('https://www.koreanair.com/etc/clientlibs/koreanair/images/components/footer/icon-blog.png');
+  background-image: url('/images/icon-blog.png');
 }
 
 /* 임시로 숨기기! */
