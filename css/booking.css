@@ -135,11 +135,15 @@ em {
 }
 
 .container {
+  min-height: 100vh;
   background-color: #f8f8f8;
+}
+.main {
+  min-height: calc(100vh - 37px - 62px - 363px);
 }
 .inner {
   width: 960px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 /* button design, button in icon design */
@@ -644,6 +648,7 @@ h1 .header__sky-team {
 }
 
 /* main */
+
 .main .inner {
   padding-top: 35px;
   padding-bottom: 85px;
