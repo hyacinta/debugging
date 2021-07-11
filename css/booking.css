@@ -344,7 +344,7 @@ input[type='checkbox']:checked + label .icon--checkbox {
 }
 h1 {
   position: absolute;
-  top: 50px;
+  top: 53px;
   left: 20px;
   width: 215px;
   height: 33px;
@@ -421,9 +421,11 @@ h1 .header__sky-team {
 .langs-country__current-view a:focus {
   box-shadow: 0 0 0 1px #fff;
 }
+
 .langs-country__select-box {
   position: absolute;
   top: 24px;
+  display: none;
   padding: 15px 15px 20px;
   border: 1px solid #6e7a7e;
   border-right: none;
@@ -538,6 +540,7 @@ h1 .header__sky-team {
   background: #fff;
   text-align: right;
 }
+
 .nav__depth1 {
   display: inline-block;
 }
@@ -548,7 +551,7 @@ h1 .header__sky-team {
 .nav__btn {
   padding-left: 40px;
   font-size: 1.8rem;
-  line-height: 32px;
+  line-height: 34px;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -584,7 +587,7 @@ h1 .header__sky-team {
   position: absolute;
   top: 61px;
   right: 20px;
-  display: flex;
+  display: none;
   border: 1px solid #ccc;
   border-top: 0;
   padding: 20px 20px 20px 30px;
@@ -662,7 +665,6 @@ h1 .header__sky-team {
   height: 37px;
   background-image: url('/images/tab-btn-bk.gif');
   background-repeat: no-repeat;
-  background-color: #fff;
   padding-left: 42px;
   font-size: 18px;
   background-position: left top;
@@ -700,10 +702,15 @@ h1 .header__sky-team {
   margin-left: 120px;
 }
 .description__box {
-  margin: 5px 0 15px;
+  margin-bottom: 15px;
   padding: 10px;
   border: 1px solid #ccc;
   font-size: 12px;
+}
+
+/* .bonus */
+.bonus {
+  display: none;
 }
 /* .journey */
 .journey .input--radio label {
@@ -751,6 +758,9 @@ h1 .header__sky-team {
 }
 
 /* occupant */
+.occupant {
+  display: none;
+}
 .occupant__title {
   font-size: 1.3rem;
   font-weight: 700;
@@ -808,6 +818,9 @@ h1 .header__sky-team {
 }
 
 /* dimmed */
+.dimmed {
+  display: none;
+}
 .dimmed.dimmed__outbox {
   position: fixed;
   top: 0;
@@ -1169,32 +1182,9 @@ li.sns__twitter {
 
 /* 임시로 숨기기! */
 
-/* 네비게이션 서브메뉴 */
-.nav__depth1-menu1 .nav__sub-menu-box,
-.nav__depth1-menu2 .nav__sub-menu-box,
-.nav__depth1-menu3 .nav__sub-menu-box,
-.nav__depth1-menu4 .nav__sub-menu-box {
-  display: none;
-}
-
-/* 지역, 언어 선택 */
-.langs-country__select-box {
-  display: none;
-}
-
 /* 주변일자 조회, 마일리지 좌석승급, 인원선택 설명박스 */
 .peripheral-date .description__box,
 .mileage-upgrade .description__box,
 .passenger__precaution {
   display: none;
-}
-
-/* 모달 팝업 */
-.dimmed {
-  display: none;
-}
-.dimmed.active,
-.peripheral-date .description__box.active,
-.mileage-upgrade .description__box.active {
-  display: block;
 }
