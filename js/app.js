@@ -67,6 +67,9 @@ const passengerInput = passenger => {
   });
 };
 
+const increase = number => ++number;
+const decrease = number => --number;
+
 window.onload = () => {
   passengerInput(passenger);
 };
@@ -149,9 +152,6 @@ $passenger.onclick = ({ target }) => {
   }
 };
 
-const increase = number => ++number;
-const decrease = number => --number;
-
 $passengerCount.onclick = ({ target }) => {
   const key = target.parentElement.firstElementChild.id;
 
@@ -162,4 +162,9 @@ $passengerCount.onclick = ({ target }) => {
   passenger[`${key}`] = number;
 
   passengerInput(passenger);
+
+  if (!(key === 'child' || key === 'baby')) return;
+
+  const $passengerDesBox = $passenger.querySelector('.passenger__precaution');
+  $passengerDesBox.style.display = passenger[`${key}`] ? 'block' : 'none';
 };
