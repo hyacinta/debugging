@@ -137,8 +137,8 @@ $bookingSelect.onclick = ({ target }) => {
 // 보너스 선택
 $bonus.onclick = ({ target }) => {
   if (target.classList.contains('icon--radio')) return;
-  const $input = target.parentElement.firstElementChild;
-  $occupant.style.display = $input.checked ? 'block' : 'none';
+  const $skyBonus = $bonus.querySelector('#skyteam-bonus');
+  $occupant.style.display = target === $skyBonus ? 'block' : 'none';
 
   dimmed(target, 'btn--question');
 };
