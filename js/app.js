@@ -1,4 +1,6 @@
 // data
+let lang = '한국어';
+
 const passenger = {
   adult: 1,
   child: 0,
@@ -7,9 +9,7 @@ const passenger = {
 
 // DOMS
 const $langsCountry = document.querySelector('.langs-country');
-const $langsCountrySelectBox = document.querySelector(
-  '.langs-country__select-box'
-);
+const $langsSelectBox = document.querySelector('#langsSelectBox');
 const $nav = document.querySelector('.nav__depth1');
 const $bookingSelect = document.querySelector('.main__tab-btn');
 const $bonus = document.querySelector('.bonus');
@@ -76,8 +76,23 @@ window.onload = () => {
 
 // EVENT
 
-// 지역/언어 선택창 open & closed
+// 지역/언어 선택
+
+$langsSelectBox.onchange = ({ target }) => {
+  lang = target.value;
+};
+
 $langsCountry.onclick = ({ target }) => {
+  const $langsCountrySelectBox = document.querySelector(
+    '.langs-country__select-box'
+  );
+  if (target.classList.contains('btn__select')) {
+    const $currentLang = $langsCountry.querySelector(
+      '.langs-country__current-langs'
+    );
+    $currentLang.textContent = lang;
+    $langsCountrySelectBox.style.display = 'none';
+  }
   if (
     !(
       target.matches('.langs-country__btn-open') ||
