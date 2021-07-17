@@ -1,6 +1,14 @@
 # 대한항공 Clone Project
 
-HTML, CSS를 이용하여 스터디를 진행하는 Team 프로젝트로 멤버들이 대한항공 사이트 내의 페이지를 선택하여 1페이지씩 클론하였습니다.
+![대한항공](https://user-images.githubusercontent.com/25615523/126051353-a23f78c0-ceeb-4342-b4d7-f040db5b48d1.gif)
+
+HTML, CSS를 이용하여 스터디를 진행하는 팀 프로젝트로 멤버들이 대한항공 사이트의 1page를 맡아서 클론하였습니다.
+
+## 사용언어
+
+- HTML5
+- CSS3 : BEM 표기법 사용
+- JS6+
 
 ## 프로젝트 진행 방법 및 목표
 
@@ -25,3 +33,10 @@ Team : Debugging
 ### 김태진
 
 - 마이 페이지
+
+## 구현 기능
+
+- 지역/언어 선택
+- MegaNavigation Open/Closed
+- Popup Open/Closed
+- 인원 선택 기능
